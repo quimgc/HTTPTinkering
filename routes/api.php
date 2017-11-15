@@ -13,10 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
+
 Route::get('/user', function (Request $request) {
+
     return [
-        'headers' => //todo headers per enviar
+
+        //todo headers per enviar
         'name' => 'pepe',
         'email' => 'pepe@pepe.com'
+
     ];
 });

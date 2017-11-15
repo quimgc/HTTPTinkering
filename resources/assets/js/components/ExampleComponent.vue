@@ -22,7 +22,9 @@
         data(){
           return {
 
-              user : null
+              user : null,
+              header: {}
+
           }
 
         },
@@ -31,13 +33,16 @@
 
             //todo mirar api axios per retornar headers html
 
+
             axios.get('api/user').then(response => {
 
                 this.user = response.data
+                
 
             }).catch(error => {
                 console.log(error)
             })
+
         }
     }
 </script>
