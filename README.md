@@ -1,6 +1,14 @@
-# Errors
+# HEADERS
 
-    SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: users.name (SQL: insert into "users" ("updated_at", "created_at") values (2017-11-15 16:59:34, 2017-11-15 16:59:34))
+Als headers acostuma anar els tokens també. 
+
+Al navegador chrome els HEADERS apareixen a:
+
+    f12>Network>XHR>clic al fitxer que apareix i apartat REQUEST HEADERS
     
-L'he sol·lucionat:
+    
+# Tipus d'autenticació
 
+Via web: Cookies (user i password)
+
+Via token

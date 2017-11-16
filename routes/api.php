@@ -15,12 +15,19 @@ use Illuminate\Http\Request;
 
 
 Route::get('/user', function (Request $request) {
-
     return [
-
-        //todo headers per enviar
+        'headers' =>['PROVA' => $request->header('PROVA'), 'HEADER1' => $request->header('HEADER1')],
         'name' => 'pepe',
         'email' => 'pepe@pepe.com'
 
     ];
-});
+})->middleware('auth:api');
+
+Route::get('/passport/user', function (Request $request) {
+    return [
+        'headers' =>['PROVA' => $request->header('PROVA'), 'HEADER1' => $request->header('HEADER1')],
+        'name' => 'pepe',
+        'email' => 'pepe@pepe.com'
+
+    ];
+})->middleware('auth:api_passport');

@@ -49,8 +49,14 @@ Route::get('/user', function (Request $request) {
 User::create($request->only('user','password'));
 });
 
-Route::view('/axios', 'axios');
+Route::view('/axios', 'axios')->middleware('auth');
+Route::view('/user2', 'user2')->middleware('auth');
+Route::view('/user3', 'user3')->middleware('auth');
 
+Route::view('tokens','tokens')->middleware('auth');
+// es crea automaticament al fer el make:auth
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
